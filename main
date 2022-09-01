@@ -1,0 +1,16 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main() {
+  // Binary to decimal
+  cout << "  Enter a  binary number " << endl;
+  int num, result = 0, i = 0, store;
+  cin >> num;
+  while (num >= 1) {
+    store = num % 10;
+    num = num / 10;
+    result = (pow(2, i) * store) + result;
+    i++;
+  }
+  cout << "It's decimal is : " << result << endl;
+}
